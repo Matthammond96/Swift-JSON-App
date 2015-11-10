@@ -61,7 +61,7 @@ extension ViewController: CLLocationManagerDelegate {
                     //self.locationNameLabel.text = "Location Name: \(spotData.locationName)"
                     //self.ratingLabel.text = "Rating: \(spotData.rating)"
                     //self.userLabel.text = "Posted By: \(spotData.user)"
-                    
+                    //
                 }
             }
         }
