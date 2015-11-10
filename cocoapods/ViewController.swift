@@ -13,11 +13,11 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var findOnMap: UIButton!
-    @IBOutlet weak var titleLabel: UILabel!
     
     
     let locationManager = CLLocationManager()

@@ -96,13 +96,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="findOnMap" destination="ID2-xc-krN" id="aHc-9M-Y8h"/>
-                        <outlet property="locationName" destination="mWS-1y-KcM" id="qIG-Rc-syQ"/>
-                        <outlet property="locationNameLabel" destination="mWS-1y-KcM" id="zva-Ei-aJU"/>
-                        <outlet property="rating" destination="0dB-ch-g1N" id="L8t-xA-PIV"/>
-                        <outlet property="ratingLabel" destination="qNC-dK-tI0" id="JZW-HP-lqd"/>
-                        <outlet property="titleLabel" destination="R05-me-Rgd" id="oT1-nc-HTz"/>
-                        <outlet property="userLabel" destination="qNC-dK-tI0" id="389-VB-dAW"/>
+                        <outlet property="locationNameLabel" destination="mWS-1y-KcM" id="sMi-W4-ocb"/>
+                        <outlet property="ratingLabel" destination="0dB-ch-g1N" id="ucF-gq-Tlz"/>
+                        <outlet property="titleLabel" destination="R05-me-Rgd" id="9U4-zq-W9f"/>
+                        <outlet property="userLabel" destination="qNC-dK-tI0" id="IRk-uS-zgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
