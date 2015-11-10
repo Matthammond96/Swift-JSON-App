@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     
     let locationManager = CLLocationManager()
+    let longitudeArray = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ extension ViewController: CLLocationManagerDelegate {
         if let newLocation = newLocation {
             print("Location Cord: \(newLocation)")
             
-            Alamofire.request(.GET, "http://woamph.com/test.json")
+            Alamofire.request(.GET, "http://woamph.com/savedLocations.json")
                 .response { request, response, data, error in
                     
                 if let data = data {
@@ -48,11 +49,18 @@ extension ViewController: CLLocationManagerDelegate {
                     let json = JSON(data: data)
                     let spotData = Spots(json: json)
                 
-                    self.titleLabel.text = "Spots Near You"
-                    self.locationNameLabel.text = "Location Name: \(spotData.locationName)"
-                    self.ratingLabel.text = "Rating: \(spotData.rating)"
-                    self.userLabel.text = "Posted By: \(spotData.user)"
+                    for locationLoop in json {
+                        let longitudeJSON = locationLoop.1["savedLocations"]["longitude"].doubleValue
+                        self.longitudeArray.app().end(longitudeJSON)
+                    }
                     
+                    for locationLoop in self.longitudeArray {
+                        print(locationLoop)
+                    }
+                    //self.titleLabel.text = "Spots Near You"
+                    //self.locationNameLabel.text = "Location Name: \(spotData.locationName)"
+                    //self.ratingLabel.text = "Rating: \(spotData.rating)"
+                    //self.userLabel.text = "Posted By: \(spotData.user)"
                     
                 }
             }
