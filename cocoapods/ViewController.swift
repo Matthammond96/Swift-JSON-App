@@ -18,10 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     
     let locationManager = CLLocationManager()
-    let longitudeArray = [Double]()
+    var array1 = [String]()
+    var array2 = [Double]()
+    var items: [String] = ["We", "Heart", "Swift"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,42 +33,20 @@ class ViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
+        
     }
+    
 }
 
 extension ViewController: CLLocationManagerDelegate {
     
-    func locationManager(manger: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+  //  func locationManager(manger: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let newLocation = locations.last
+    //    let newLocation = locations.last
         
-        if let newLocation = newLocation {
-            print("Location Cord: \(newLocation)")
-            
-            Alamofire.request(.GET, "http://woamph.com/savedLocations.json")
-                .response { request, response, data, error in
-                    
-                if let data = data {
-                        
-                    let json = JSON(data: data)
-                    let spotData = Spots(json: json)
-                
-                    for locationLoop in json {
-                        let longitudeJSON = locationLoop.1["savedLocations"]["longitude"].doubleValue
-                        self.longitudeArray.app().end(longitudeJSON)
-                    }
-                    
-                    for locationLoop in self.longitudeArray {
-                        print(locationLoop)
-                    }
-                    //self.titleLabel.text = "Spots Near You"
-                    //self.locationNameLabel.text = "Location Name: \(spotData.locationName)"
-                    //self.ratingLabel.text = "Rating: \(spotData.rating)"
-                    //self.userLabel.text = "Posted By: \(spotData.user)"
-                    //
-                }
-            }
-        }
-    }
+      //  if let newLocation = newLocation {
+            //print("Location Cord: \(newLocation)")
+      //  }
+   // }
 }
 

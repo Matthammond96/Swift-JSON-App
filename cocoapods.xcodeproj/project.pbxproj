@@ -16,6 +16,7 @@
 		187F517C1BF0C5CE00AC78C3 /* cocoapodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F517B1BF0C5CE00AC78C3 /* cocoapodsUITests.swift */; };
 		187F518C1BF0D51500AC78C3 /* spotJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F518B1BF0D51500AC78C3 /* spotJSON.swift */; };
 		30F471B5DA9050F2DE11A2D8 /* Pods_cocoapods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3337342DC5E0D58598C55E6A /* Pods_cocoapods.framework */; };
+		C9C21A581BF3C25B00355B44 /* spotTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C21A571BF3C25B00355B44 /* spotTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3337342DC5E0D58598C55E6A /* Pods_cocoapods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cocoapods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F04409BF1D5E3514BAB9C2 /* Pods-cocoapods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoapods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cocoapods/Pods-cocoapods.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8B7750FAED41D1863E768 /* Pods-cocoapods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoapods.release.xcconfig"; path = "Pods/Target Support Files/Pods-cocoapods/Pods-cocoapods.release.xcconfig"; sourceTree = "<group>"; };
+		C9C21A571BF3C25B00355B44 /* spotTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spotTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				187F515B1BF0C5CE00AC78C3 /* AppDelegate.swift */,
 				187F515D1BF0C5CE00AC78C3 /* ViewController.swift */,
 				187F518B1BF0D51500AC78C3 /* spotJSON.swift */,
+				C9C21A571BF3C25B00355B44 /* spotTable.swift */,
 				187F515F1BF0C5CE00AC78C3 /* Main.storyboard */,
 				187F51621BF0C5CE00AC78C3 /* Assets.xcassets */,
 				187F51641BF0C5CE00AC78C3 /* LaunchScreen.storyboard */,
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C21A581BF3C25B00355B44 /* spotTable.swift in Sources */,
 				187F515E1BF0C5CE00AC78C3 /* ViewController.swift in Sources */,
 				187F515C1BF0C5CE00AC78C3 /* AppDelegate.swift in Sources */,
 				187F518C1BF0D51500AC78C3 /* spotJSON.swift in Sources */,
