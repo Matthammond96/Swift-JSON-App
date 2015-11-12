@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     var array1 = [String]()
     var array2 = [Double]()
     var items: [String] = ["We", "Heart", "Swift"]
+    var locationName = [String]()
+    var longitudeLabelArray = [Double]()
 
     
     override func viewDidLoad() {
@@ -34,9 +36,11 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         
+        
     }
     
 }
+
 
 extension ViewController: CLLocationManagerDelegate {
     
@@ -49,4 +53,6 @@ extension ViewController: CLLocationManagerDelegate {
       //  }
    // }
 }
+
+
 

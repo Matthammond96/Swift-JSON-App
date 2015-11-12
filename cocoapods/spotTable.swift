@@ -6,7 +6,11 @@ import SwiftyJSON
 
 class SpotsDataClass: UITableViewController {
     
+    
+    @IBOutlet weak var longitudeLabel: UILabel!
+    
     var locationName = [String]()
+    var longitudeLabelArray = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +25,14 @@ class SpotsDataClass: UITableViewController {
                     for locationLoop in json {
                         let usersJSON = locationLoop.1["user"].stringValue
                         self.locationName.append(usersJSON)
-                        //let longitudeJSON = locationLoop.1["longitude"].doubleValue
-                        //self.array2.append(longitudeJSON)
+                        let longitudeJSON = locationLoop.1["longitude"].doubleValue
+                        self.longitudeLabelArray.append(longitudeJSON)
+                        self.tableView.reloadData()
                     }
                     
                     for i in 0 ..< self.locationName.count {
                         print("\(self.locationName[i])")
-                        //print("\(self.array2[i])")
+                        print("\(self.longitudeLabelArray[i])")
                         //self.locationNameLabel.text = "Location Name: \(self.array1[i])"
                     }
                     
@@ -49,9 +54,8 @@ class SpotsDataClass: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("spotTable", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = "\(locationName[indexPath.row])"
+        cell.textLabel?.text = locationName[indexPath.row]
+        
         return cell
     }
-    
-    
 }
